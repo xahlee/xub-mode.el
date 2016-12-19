@@ -1,9 +1,10 @@
-;;; xub-mode.el --- Major mode for browsing unicode characters. -*- coding: utf-8 -*-
+;;; xub-mode.el --- Major mode for browsing unicode characters. -*- coding: utf-8; lexical-binding: t; -*-
 
-;; Copyright © 2010 by Xah Lee
+;; Copyright © 2010, 2016 by Xah Lee
 
-;; Author: Xah Lee ( http://xahlee.org/ )
+;; Author: Xah Lee ( http://xahlee.info/ )
 ;; Created: 2010-06-20
+;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: unicode, character map
 
 ;; You can redistribute this program and/or modify it. Please give credit and link. Thanks.
@@ -41,14 +42,13 @@
 
 ;; Get unicode files to browse at: http://ergoemacs.org/emacs/unicode-browser.html
 
-;; To see the inline documentation in emacs, type “C-h m”
-;; (describe-mode). (if you have not load the mode, first type
-;; Alt+x xub-mode)
+;; To see the inline documentation in emacs, type “C-h m” (describe-mode). (if you have not load the mode, first type Alt+x xub-mode)
 
 ;; donate $3 please. Paypal to xah@xahlee.org , thanks.
 
 ;;; HISTORY
 
+;; version 1.1.6, 2016-12-18 • turned on lexical-binding
 ;; version 1.1.5, 2012-06-30 • minor implementation improvement on {“xub-show-down”, “xub-show-up”}. It no longer generates compilation warning about calling “next-line”, “previous-line”.
 ;; version 1.1.4, 2010-12-20 • The keys 【Alt+12】 for zoom-in and 【Alt+11】 for zoom-out are removed. New keys are: 【Ctrl++】 (zoom-in) and 【Ctrl+-】 zoom-out. Holding down Ctrl and scroll mouse wheel also works. These are more compatible with web browsers.
 ;; version 1.1.3, 2010-11-18 • Fixed a bug where describe-major-mode generates a error.
@@ -60,7 +60,7 @@
 ;;; Code:
 
 (defvar xub-version)
-(setq xub-version "1.1.4")
+(setq xub-version "1.1.6")
 
 (defvar xub-map nil "Keymap for xub")
 
